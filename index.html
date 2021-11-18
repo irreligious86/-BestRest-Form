@@ -18,27 +18,91 @@
 
     <div class="row align-items-center invitation-screen">
         <div class="col-12 col-md-8 offset-md-2 invitation-screen-inner">
-            <div class="log-block">
+            <div class="invitation-log-block">
                 <img src="./assets/logo-img.svg" alt="logo image" class="logo-img">
             </div>
-            <div class="title-block">
-                <span class="title-span">
+            <div class="invitation-title-block">
+                <span class="invitation-title-span">
                     Find the
-                    <span class="title-highlighted-span">
+                    <span class="invitation-title-highlighted-span">
                         best place <br> to rest
                     </span>
                     while travelling
                 </span>
             </div>
-            <div class="registration-block">
-                <a class="registration-ancor" href="#">Registration</a>
+            <div class="invitation-registration-block">
+                <a class="invitation-registration-button" href="#target">Registration</a>
             </div>
         </div>
     </div>
 
-    <div class="row align-items-center form-screen">
-        <div class="col-12 col-md-6 offset-md-3 form-screen-inner">
+    <div class="row justify-content-center  align-items-center form-screen">
+        <!--        <div id="target" class="col-12 col-md-6 offset-md-3 form-screen-inner">-->
+        <div class="col form-screen-inner">
+            <form action="" method="post">
+                <h2 class="form-title">Form title</h2>
+                <div class="row justify-content-center">
 
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
+                        <input class="form-input" id="first-name" type="text" name="first-name">
+                        <label class="form-label" for="first-name">First Name</label>
+                    </div>
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
+                        <input class="form-input" id="second-name" type="text" name="second-name">
+                        <label class="form-label" for="second-name">Second Name</label>
+                    </div>
+                <div class="w-100"></div>
+
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
+                        <input class="form-input" id="country" type="" name="country">
+                        <label class="form-label" for="country">Country</label>
+                    </div>
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
+                        <input class="form-input" id="phone" type="number" name="phone">
+                        <label class="form-label" for="phone">Phone</label>
+                    </div>
+                <div class="w-100"></div>
+
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
+                        <input class="form-input" id="password" type="password" name="password">
+                        <label class="form-label" for="password">Password</label>
+                    </div>
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
+                        <input class="form-input" id="confirm-password" type="password" name="confirm-password">
+                        <label class="form-label" for="confirm-password">Confirm Password</label>
+                    </div>
+                <div class="w-100"></div>
+
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3  form-group">
+                        <input class="form-input" id="email" type="email" name="email">
+                        <label class="form-label" for="email">E-mail</label>
+                    </div>
+                    <div class="col-11 col-sm-5 col-md-4 col-lg-3  form-group checkbox-group">
+                        <input class="form-input" id="agreement" type="checkbox" name="agreement">
+                        <label class="form-label" for="agreement">Agreement</label>
+                    </div>
+                <div class="w-100"></div>
+
+                </div>
+
+
+<!--                <div class="row align-items-center">-->
+<!--                    <div class="col-10 offset-1 col-sm form-group">-->
+<!--                        <input class="form-input" id="cemail" type="email" name="email">-->
+<!--                        <label class="form-label" for="cemail">E-mail</label>-->
+<!--                    </div>-->
+<!--                    <div class="col-10 offset-1 col-sm  form-group">-->
+<!--                        <input class="form-input" id="cagreement" type="checkbox" name="agreement">-->
+<!--                        <label class="form-label" for="cagreement">Agreement</label>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+
+                <input class="form-button" type="submit" value="Sign Up">
+                <span class="form-footer">
+                    If you have an account,  <a href="#">Log In</a>
+                </span>
+            </form>
         </div>
     </div>
 
