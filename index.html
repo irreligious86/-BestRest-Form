@@ -8,14 +8,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BestRest</title>
     <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./bootstrap-grid.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./ancor.js"></script>
+    <script type="text/javascript" src="./script.js" defer></script>
 </head>
 <body>
 <div class="container-fluid">
-
     <div class="row align-items-center invitation-screen">
         <div class="col-12 col-md-8 offset-md-2 invitation-screen-inner">
             <div class="invitation-log-block">
@@ -36,76 +37,173 @@
         </div>
     </div>
 
-    <div class="row justify-content-center  align-items-center form-screen">
-        <!--        <div id="target" class="col-12 col-md-6 offset-md-3 form-screen-inner">-->
-        <div class="col form-screen-inner">
-            <form action="" method="post">
-                <h2 class="form-title">Form title</h2>
-                <div class="row justify-content-center">
+    <div class="row justify-content-center  form-screen">
+        <div id="target" class="col  form-screen-inner">
+            <div class="row align-items-center align-self-center margin-auto">
+                <div class="col">
+                    <form action="" method="post">
+                        <h2 class="form-title">
+                            <span class="form-title-highlighted">Sign Up</span>
+                            and find the best place to rest while traveling
+                        </h2>
+                        <div class="row justify-content-center">
 
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
-                        <input class="form-input" id="first-name" type="text" name="first-name">
-                        <label class="form-label" for="first-name">First Name</label>
-                    </div>
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
-                        <input class="form-input" id="second-name" type="text" name="second-name">
-                        <label class="form-label" for="second-name">Second Name</label>
-                    </div>
-                <div class="w-100"></div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/first-name_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="first-name"
+                                           type="text"
+                                           placeholder="First Name"
+                                           name="first-name"
+                                           minlength=2>
+                                    <label class="form-label"
+                                           for="first-name"
+                                           autofocus>First Name</label>
+                                </div>
+                            </div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/second-name_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="second-name"
+                                           type="text"
+                                           placeholder="Second Name"
+                                           name="second-name"
+                                           minlength=2>
+                                    <label class="form-label" for="second-name">Second Name</label>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
 
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
-                        <input class="form-input" id="country" type="" name="country">
-                        <label class="form-label" for="country">Country</label>
-                    </div>
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
-                        <input class="form-input" id="phone" type="number" name="phone">
-                        <label class="form-label" for="phone">Phone</label>
-                    </div>
-                <div class="w-100"></div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/country_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="country"
+                                           list=country-list
+                                           placeholder="Country"
+                                           name="country"
+                                           required>
+                                    <datalist id=country-list>
+                                        <option value="Afghanistan">
+                                        <option value="Albania">
+                                        <option value="Algeria">
+                                        <option value="Andorra">
+                                        <option value="Angola">
+                                        <option value="Antigua and Barbuda">
+                                        <option value="Argentina">
+                                        <option value="Armenia">
+                                        <option value="Australia">
+                                    </datalist>
+                                    <label class="form-label"
+                                           for="country">Country</label>
+                                </div>
+                            </div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/phone_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="phone"
+                                           type="tel"
+                                           placeholder="Phone"
+                                           name="phone"
+                                           required>
+                                    <label class="form-label"
+                                           for="phone">Phone</label>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
 
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
-                        <input class="form-input" id="password" type="password" name="password">
-                        <label class="form-label" for="password">Password</label>
-                    </div>
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3 form-group">
-                        <input class="form-input" id="confirm-password" type="password" name="confirm-password">
-                        <label class="form-label" for="confirm-password">Confirm Password</label>
-                    </div>
-                <div class="w-100"></div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/password_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="password"
+                                           type="password"
+                                           placeholder="Password"
+                                           name="password"
+                                           pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*">
+                                    <label class="form-label" for="password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/confirm-password_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="confirm-password"
+                                           type="password"
+                                           placeholder="Confirm Password"
+                                           name="confirm-password">
+                                    <label class="form-label"
+                                           for="confirm-password">Confirm Password</label>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
 
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3  form-group">
-                        <input class="form-input" id="email" type="email" name="email">
-                        <label class="form-label" for="email">E-mail</label>
-                    </div>
-                    <div class="col-11 col-sm-5 col-md-4 col-lg-3  form-group checkbox-group">
-                        <input class="form-input" id="agreement" type="checkbox" name="agreement">
-                        <label class="form-label" for="agreement">Agreement</label>
-                    </div>
-                <div class="w-100"></div>
+                            <div class="col-11 col-sm-5 form-group">
+                                <img src="./assets/icons/email_icon.svg"
+                                     alt="lost icon"
+                                     class="form-group-icon">
+                                <div class="form-group-content">
+                                    <input class="form-input"
+                                           id="email"
+                                           type="email"
+                                           placeholder="E-mail"
+                                           name="email"
+                                           pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/'>
+                                    <label class="form-label"
+                                           for="email">E-mail</label>
+                                </div>
+                            </div>
+                            <div class="col-11 col-sm-5 form-group checkbox-group transparent">
+                                <input class="form-input-checkbox"
+                                       id="agreement"
+                                       type="checkbox"
+                                       name="agreement">
+                                <label class="form-label-checkbox"
+                                       for="agreement">I agree to the
+                                    <a class="agreement-link"
+                                       href="https://www.termsfeed.com/blog/sample-terms-and-conditions-template/">
+                                        Terms & Conditions</a>
+                                </label>
+                            </div>
 
+                            <div class="col-11 col-sm-5 form-group transparent form-button">
+                                <input class="form-button-inner"
+                                       type="submit"
+                                       value="Sign Up">
+                            </div>
+                            <div class="col-11 col-sm-5 form-group transparent ">
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-
-<!--                <div class="row align-items-center">-->
-<!--                    <div class="col-10 offset-1 col-sm form-group">-->
-<!--                        <input class="form-input" id="cemail" type="email" name="email">-->
-<!--                        <label class="form-label" for="cemail">E-mail</label>-->
-<!--                    </div>-->
-<!--                    <div class="col-10 offset-1 col-sm  form-group">-->
-<!--                        <input class="form-input" id="cagreement" type="checkbox" name="agreement">-->
-<!--                        <label class="form-label" for="cagreement">Agreement</label>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-
-                <input class="form-button" type="submit" value="Sign Up">
-                <span class="form-footer">
-                    If you have an account,  <a href="#">Log In</a>
+            </div>
+            <div class="row align-items-center align-self-center margin-top-auto">
+                <div class="col">
+                    <span class="form-footer">
+                    If you have an account,
+                    <a href="#">
+                        Log In
+                    </a>
                 </span>
-            </form>
+                </div>
+            </div>
         </div>
     </div>
-
 </div>
 </div>
 </body>

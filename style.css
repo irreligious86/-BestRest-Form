@@ -37,12 +37,13 @@
   color: #6CEEC7;
   background-color: transparent;
   border-radius: 5px;
-  padding: 15px 60px;
   font-style: normal;
   font-weight: 500;
   text-align: center;
   font-size: 19px;
   line-height: 23px;
+  text-decoration: none;
+  padding: 15px 60px;
 }
 .invitation-registration-button:hover {
   transition: all 0.3s ease-in-out;
@@ -53,7 +54,6 @@
 
 .form-screen {
   background-image: url("./assets/img-bgs/bg-2.jpg");
-  height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-background-size: cover;
@@ -61,35 +61,159 @@
   -o-background-size: cover;
   background-size: cover;
 }
-.form-screen .row {
-  border: 1px solid #1e9b9b;
+.form-screen-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  max-width: 800px;
 }
 .form-title {
-  color: yellow;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: whitesmoke;
+  margin: 20px auto;
+}
+.form-title-highlighted {
+  color: #6CEEC7;
 }
 .form-group {
   display: flex;
-  flex-direction: row-reverse;
-  justify-items: center;
-  align-content: center;
+  flex-direction: row;
+  justify-items: flex-start;
+  flex-wrap: nowrap;
   gap: 15px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   border: 2px solid rgba(155, 155, 155, 0.6);
-  min-height: 40px;
+  min-height: 60px;
   margin: 1rem;
+}
+.form-group:hover {
+  border-color: #6CEEC7;
+}
+.form-group:focus {
+  border-color: #6CEEC7;
+}
+.form-group-content {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
 }
 .form-input {
   background-color: transparent;
   border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 19px;
+  line-height: 23px;
+  color: #E0E0E0;
+  width: 100%;
 }
 .form-label {
-  color: yellow;
+  color: #6CEEC7;
+  display: none;
+}
+.form-button {
+  padding: 0;
+}
+.form-button-inner {
+  border: 3px solid #6CEEC7;
+  color: #6CEEC7;
+  background-color: transparent;
+  border-radius: 5px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: center;
+  font-size: 19px;
+  line-height: 23px;
+  text-decoration: none;
+  width: 60%;
+}
+.form-button-inner:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #6CEEC7;
+  color: black;
+  text-decoration: none;
+}
+.form-button-inner:hover {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+.form-footer {
+  display: inline-block;
+  margin: 15px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  color: #E0E0E0;
+}
+.form-footer a {
+  color: #6CEEC7;
+  text-decoration: underline;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown).form-input:not(:focus) ~ .form-label {
+  display: inline-block;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.margin-top-auto {
+  margin-top: auto;
 }
 
 .checkbox-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
   border-color: rgba(0, 0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  /* checked */
+  /* disabled */
+}
+.checkbox-group input[type=checkbox] {
+  display: none;
+}
+.checkbox-group input:checked + label:before {
+  background: #67D9B7;
+  content: " ";
+}
+.checkbox-group input:disabled + label:before {
+  background: #ff0000;
+  color: #ff0000;
+}
+.checkbox-group .form-label-checkbox {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  color: #E0E0E0;
+  cursor: default;
+}
+.checkbox-group .form-label-checkbox:before {
+  content: " ";
+  color: #000;
+  display: inline-block;
+  margin-right: 5px;
+  width: 14px;
+  height: 14px;
+  background: transparent;
+  border: 1px solid #67D9B7;
+  border-radius: 3px;
+}
+.checkbox-group .agreement-link {
+  color: #67D9B7;
+  text-decoration: underline;
 }
 
 @font-face {
@@ -102,8 +226,27 @@
   display: none;
 }
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.transparent {
+  border-color: transparent;
+  background-color: transparent;
+}
+.transparent:hover {
+  border-color: transparent;
+}
+.transparent:hover {
+  border-color: transparent;
+  background-color: transparent;
+}
+.transparent:hover:hover {
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
