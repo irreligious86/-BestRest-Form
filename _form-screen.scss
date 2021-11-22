@@ -135,5 +135,14 @@ display: flex;
   margin-top: auto;
 }
 
+@media (max-width: 576px) {
+  .form-button-inner {
+    width: 100%;
+  }
+}
 
-//@media
+@media (max-height: 576px) and (orientation: landscape) {
+  .invitation-screen, .form-screen {
+    min-height: 200vh;
+  }
+}
