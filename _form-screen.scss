@@ -94,6 +94,7 @@
       &:hover {
         @include transition-style;
         transform: matrix(-1, 0, 0, 1, 0, 0);
+        transition-delay: 300ms;
       }
     }
   }

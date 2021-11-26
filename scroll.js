@@ -1,4 +1,6 @@
 
+$("html,body").css("overflow","hidden");
+
 $(document).ready(function(){
     $('a[href^="#"], *[data-href^="#"]').on('click', function(e){
         e.preventDefault();
