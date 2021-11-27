@@ -139,6 +139,10 @@
   transition: 0.2s ease all;
 }
 
+.form-input:invalid ~  .form-label {
+  border: 2px solid red;
+}
+
 
 .margin-auto {
   margin: auto;
@@ -146,6 +150,15 @@
 
 .margin-top-auto {
   margin-top: auto;
+}
+
+.err-msg {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  left: -10px;
+  top: 56px;
 }
 
 @media (min-width: 360px), (max-width: 576px), screen {
